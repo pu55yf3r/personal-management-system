@@ -2,9 +2,11 @@ user:
     headers: { profileSettings: 'User profile settings', changeSettings: 'Change settings', avatarPreview: 'Your avatar preview' }
     texts: { passwordDisabledForDemo: 'Password changing has been disabled for demo' }
 goals:
-    list: { headers: { todolist: 'Todo list' } }
+    list: { headers: { todolist: 'Goals list' } }
     payments: { timeElapsed: 'time elapsed', daysLeft: 'days left', days: days, paymentStartsIn: 'Payment starts in' }
     settings: { headers: { addGoal: 'Add goal', addSubgoal: 'Add subgoal', addPaymentGoal: 'Add payment goal' }, goalsSection: { table: { name: Name, description: Description, displayOnDashboard: 'Display on Dashboard' } }, subGoalsSection: { table: { name: Name, goal: Goal } }, goalsPaymentsSection: { table: { name: Name, collectionStartDate: 'Collection start date', deadline: Deadline, moneyGoal: 'Money goal', moneyCollected: 'Money collected', displayOnDashboard: 'Display on dashboard' } } }
+todo:
+    list: { headers: { label: 'Todo list', addTodo: 'Add todo', addElement: 'Add element' } }
 notes:
     create: { headers: { newNote: 'Add new note' } }
     category: { table: { category: Category, icon: Icon, color: Color, parent: Parent }, error: { categoryWithThisNameOrIdExist: 'Category with this name or id does not exist!', categoryIsEmpty: 'The category which You''ve just tried to enter is empty, therefore You were redirected', categoryWithThisNameAlreadyExistsInThisParent: 'Category with this name already exists in this parent' }, popover: { createNote: 'Create note' } }
@@ -74,7 +76,7 @@ upload:
     uploadTable: { fileName: 'File name', fileExtension: 'File extension', tags: Tags }
     errors: { thereWasAnErrorWhileUploadingFiles: 'There was an error while uploading files' }
 issues:
-    card: { lastContactDate: 'Last contact date: ', lastProgressDate: 'Last progress date: ', preview: { headers: { contacts: Contacts, progress: Progress } }, popovers: { toggleDashboardVisibility: 'Toggle dashboard visibility', previewAndEdit: 'Preview and edit', addRecords: 'Add records', removeRecord: 'Remove record' }, ajaxCallMessages: { dashboardVisibilityHasBeenToggled: 'Dashboard visibility has been toggled' } }
+    card: { lastContactDate: 'Last contact date: ', lastProgressDate: 'Last progress date: ', preview: { headers: { contacts: Contacts, progress: Progress } }, popovers: { toggleDashboardVisibility: 'Toggle dashboard visibility', previewAndEdit: 'Preview and edit', addRecords: 'Add records', addOrModifyExistingTodo: 'Add or modify existing todo', removeRecord: 'Remove record' }, ajaxCallMessages: { dashboardVisibilityHasBeenToggled: 'Dashboard visibility has been toggled' } }
     contactsTable: { icon: Icon, date: Date, information: Information, actions: Actions }
     popover: { createIssue: 'Create issue' }
 other:
@@ -94,13 +96,14 @@ responses:
     notes: { couldNotFindNoteForId: 'Could not find note for id: ' }
     menu: { nodeHasBeenRendered: 'Menu has been rendered', menuNodeWithNameWasNotFound: 'Menu node with given name was not found', thisModuleNameIsNotMappedToMenuNodePath: 'This module name is not mapped to menu node path: ' }
     lockResource: { invalidPassword: 'Invalid password', passwordIsMissing: 'Password is missing', youAreNotAllowedToSeeThisResource: 'You are not allowed to see this resource', passwordHasBeenCreated: 'Password has been created', passwordHasBeenUpdated: 'Password has been updated', failedToSetLockPassword: 'Failed to set lock password' }
+    todo: { todoElementStatusHasBeenChanged: 'Todo element status has been changed', todoElementStatusCouldNotBeenChanged: 'Todo element status could not been changed', allTodoElementsAreDoneTodoIsCompleted: 'All todo elements are done, todo has been marked as completed', todoElementUncheckedTodoNoLongerCompleted: 'You have unchecked one of todo elements therefore todo status has been marked as not completed' }
 lightgallery:
     headers: { images: Images }
     labels: { tags: Tags, search: Search }
 dashboard:
     widgets: { incoming-schedules: { label: Schedules }, my-goals-payments: { label: 'Goals payments' }, my-goals: { label: 'Goals progress' }, pending-issues: { label: 'Pending issues' } }
 sidebar:
-    menu: { dashboard: { label: Dashboard }, achievements: { label: Achievements }, goals: { label: Goals, list: List, payments: Payments, settings: Settings }, car: { label: Car, schedules: Schedules, settings: Settings }, schedules: { label: Schedules, submodule: { car: { label: Car } }, settings: Settings }, contacts: { label: Contacts, settings: Settings }, files: { label: Files, mainDir: 'Main folder' }, images: { label: Images, mainDir: 'Main folder' }, job: { label: Job, afterhours: Afterhours, holidays: Holidays, settings: Settings }, passwords: { label: Passwords, passwords: Passwords, settings: Settings }, payments: { label: Payments, productsPrices: 'Products prices', monthlyPayments: 'Monthly payments', moneyOwed: 'Money owed', incomes: Incomes, bills: Bills, settings: Settings }, shopping: { label: Shopping, plans: Plans }, travels: { label: Travels, ideas: Ideas }, notes: { label: Notes, new: 'Create new', settings: Settings, categories: Categories }, upload: { label: Upload, add: Add, manage: Manage }, reports: { label: Reports, monthlyPaymentsSummaries: 'Monthly payments summaries', paymentsCharts: 'Payments charts', savingsCharts: 'Savings charts', historicalMoneyOwed: 'Historical money owed' }, issues: { label: Issues, pending: Pending } }
+    menu: { dashboard: { label: Dashboard }, achievements: { label: Achievements }, goals: { label: Goals, list: List, payments: Payments, settings: Settings }, todo: { label: Todo, list: List, settings: Settings }, car: { label: Car, schedules: Schedules, settings: Settings }, schedules: { label: Schedules, submodule: { car: { label: Car } }, settings: Settings }, contacts: { label: Contacts, settings: Settings }, files: { label: Files, mainDir: 'Main folder' }, images: { label: Images, mainDir: 'Main folder' }, job: { label: Job, afterhours: Afterhours, holidays: Holidays, settings: Settings }, passwords: { label: Passwords, passwords: Passwords, settings: Settings }, payments: { label: Payments, productsPrices: 'Products prices', monthlyPayments: 'Monthly payments', moneyOwed: 'Money owed', incomes: Incomes, bills: Bills, settings: Settings }, shopping: { label: Shopping, plans: Plans }, travels: { label: Travels, ideas: Ideas }, notes: { label: Notes, new: 'Create new', settings: Settings, categories: Categories }, upload: { label: Upload, add: Add, manage: Manage }, reports: { label: Reports, monthlyPaymentsSummaries: 'Monthly payments summaries', paymentsCharts: 'Payments charts', savingsCharts: 'Savings charts', historicalMoneyOwed: 'Historical money owed' }, issues: { label: Issues, pending: Pending } }
 topbar:
     search: { placeholder: 'Search for files by tags...' }
     user: { profile: Profile, settings: Settings, resources: { locked: Locked, unlocked: Unlocked, setLockPassword: 'Set lock password' }, logout: Logout }
@@ -114,7 +117,9 @@ buttons:
 forms:
     MyGoalsPaymentsType: { collectionStartDate: 'Collection start date', displayOnDashboard: 'Display on dashboard', deadline: Deadline, name: Name, moneyGoal: 'Money goal', moneyCollected: 'Money collected' }
     MyGoalsType: { displayOnDashboard: 'Display on dashboard', name: Name, description: Description }
+    MyTodoType: { displayOnDashboard: 'Display on dashboard', name: Name, description: Description, module: Module }
     MySubgoalsType: { name: Name, myGoal: 'My goal' }
+    MyTodoElementType: { name: Name, todo: Todo }
     MyNotesCategoriesType: { parentId: Parent, name: Name, icon: Icon, color: Color }
     MyNotesType: { labels: { title: Title, body: Body, category: Category } }
     MyContactsType: { phone: 'Phone Number', email: Email, other: Contact, archived: Contact, type: Type, description: Description, group: Group }
@@ -181,6 +186,7 @@ dialogs:
     addIssue: { header: 'Add issue' }
     addIssueProgress: { header: 'Add issue progress' }
     addIssueContact: { header: 'Add issue contact' }
+    addOrModifyTodo: { add: 'Add todo', modify: 'Modify todo' }
 messages:
     SettingValidationDTO: { success: 'Validation has been passed', failure: { duplicatedValue: 'Duplicated value has been found for given key: ', exceptionWaThrown: 'Exception was thrown with message' } }
     ajax: { success: { recordHasBeenCreated: 'Record has been created', recordHasBeenRemoved: 'Record has been removed' }, failure: { duplicatedRecord: 'Duplicated record', formValidationFailed: 'Form validation failed', internalServerError: 'Internal server error', undefinedError: 'Undefined error', couldNotRemoveRecord: 'Could not remove record', badRequest: 'Bad Request' } }
